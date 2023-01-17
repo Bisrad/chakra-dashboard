@@ -3,15 +3,15 @@ import {
   theme as base,
   withDefaultColorScheme,
   withDefaultVariant,
-} from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
+} from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const inputSelectStyles = {
   variants: {
     filled: {
       field: {
         _focus: {
-          borderColor: 'brand.500',
+          borderColor: "brand.500",
         },
       },
     },
@@ -19,7 +19,7 @@ const inputSelectStyles = {
   sizes: {
     md: {
       field: {
-        borderRadius: 'none',
+        borderRadius: "none",
       },
     },
   },
@@ -28,7 +28,7 @@ const inputSelectStyles = {
 const brandRing = {
   _focus: {
     ring: 2,
-    ringColor: 'brand.500',
+    ringColor: "brand.500",
   },
 };
 
@@ -36,16 +36,16 @@ const theme = extendTheme(
   {
     colors: {
       brand: {
-        50: '#f5fee5',
-        100: '#e1fbb2',
-        200: '#cdf781',
-        300: '#b8ee56',
-        400: '#a2e032',
-        500: '#8ac919',
-        600: '#71ab09',
-        700: '#578602',
-        800: '#3c5e00',
-        900: '#203300',
+        50: "#f5fee5",
+        100: "#e1fbb2",
+        200: "#cdf781",
+        300: "#b8ee56",
+        400: "#a2e032",
+        500: "#8ac919",
+        600: "#71ab09",
+        700: "#578602",
+        800: "#3c5e00",
+        900: "#203300",
       },
     },
     fonts: {
@@ -56,17 +56,17 @@ const theme = extendTheme(
       Button: {
         variants: {
           primary: (props: Record<string, any>) => ({
-            rounded: 'none',
+            rounded: "none",
             ...brandRing,
-            color: mode('white', 'gray.800')(props),
-            backgroundColor: mode('brand.500', 'brand.200')(props),
+            color: mode("white", "gray.800")(props),
+            backgroundColor: mode("brand.500", "brand.200")(props),
 
             _hover: {
-              backgroundColor: mode('brand.600', 'brand.300')(props),
+              backgroundColor: mode("brand.600", "brand.300")(props),
             },
 
             _active: {
-              backgroundColor: mode('brand.700', 'brand.400')(props),
+              backgroundColor: mode("brand.700", "brand.400")(props),
             },
           }),
         },
@@ -76,7 +76,7 @@ const theme = extendTheme(
       Checkbox: {
         baseStyle: {
           control: {
-            borderRadius: 'none',
+            borderRadius: "none",
             ...brandRing,
           },
         },
@@ -84,12 +84,12 @@ const theme = extendTheme(
     },
   },
   withDefaultColorScheme({
-    colorScheme: 'brand',
-    components: ['Checkbox'],
+    colorScheme: "brand",
+    components: ["Checkbox"],
   }),
   withDefaultVariant({
-    variant: 'filled',
-    components: ['Input', 'Select'],
+    variant: "filled",
+    components: ["Input", "Select"],
   })
 );
 
